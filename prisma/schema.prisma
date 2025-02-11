@@ -1,0 +1,29 @@
+generator client {
+  provider        = "prisma-client-js"
+  previewFeatures = ["postgresqlExtensions"]
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id                String  @id @default(uuid())
+  email             String  @unique
+  password          String
+  role              String  @default("USER")
+  tasks             Task[]
+  refreshToken      String?
+  emailVerified     Boolean @default(false)
+  verificationToken String?
+}
+
+model Task {
+  id          String  @id @default(uuid())
+  title       String
+  description String?
+  completed   Boolean @default(false)
+  userId      String
+  user        User    @relation(fields: [userId], references: [id])
+}
