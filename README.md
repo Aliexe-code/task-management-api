@@ -61,9 +61,8 @@ Task Management API built with [Bun](https://bun.sh/) [NestJS](https://nestjs.co
 
 ### Prerequisites
 -   **Bun:** v1.1 or later OR  **Node.js:** v14 or later
-- **PostgreSQL:** Ensure you have a running PostgreSQL database (cloud Pg neon account or pgAdmin4 on your local machine or any other option)
-- **Bun** : is promising runtime for javascript and they claimed that it will replace nodejs , the thing that not every one knows that Bun works also as a package manager which has great performance according to pnpm or yarn or npm
-  but in production cases my be different nodejs is stable and well known 
+- **PostgreSQL:** Ensure you have a running PostgreSQL database (**cloud Pg neon account** or **pgAdmin4** on your local machine or any other option)
+- **Bun**: **Bun** is a promising JavaScript runtime that some claim will eventually replace Node.js. Not everyone knows that Bun also functions as a package manager, offering performance improvements compared to pnpm, Yarn, or npm. However, in production environments, the situation might differ—Node.js remains stable and widely adopted.
 
 ### Installation
 
