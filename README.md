@@ -73,7 +73,8 @@ Task Management API built with [Bun](https://bun.sh/) [NestJS](https://nestjs.co
    git clone https://github.com/yourusername/nestjs-task-management-api.git
    cd nestjs-task-management-api
    bun install || npm install
-   DATABASE_URL="postgresql://USER:PASSWORD@localhost:5432/mydatabase?schema=public"JWT_SECRET="yourSuperSecretKey" (# I use cloud pg neon)
+   DATABASE_URL="postgresql://USER:PASSWORD@localhost:5432/mydatabase?schema=public" (# I use cloud pg neon)
+   JWT_SECRET="yourSuperSecretKey" 
    bunx prisma migrate dev --name init
    bunx prisma generate
    bunx prisma studio
