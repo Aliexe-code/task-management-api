@@ -49,7 +49,7 @@ Task Management API built with [Bun](https://bun.sh/) [NestJS](https://nestjs.co
 ## Technologies Used
 
 - **Framework:** NestJS
-- **Runtime**:** Bun 
+- **Runtime:** Bun 
 - **HTTP Adapter:** Fastify
 - **Database:** PostgreSQL
 - **ORM:** Prisma
