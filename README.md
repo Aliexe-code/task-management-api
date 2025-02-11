@@ -24,76 +24,59 @@
 
 ## Description
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+# NestJS Task Management API
 
-## Project setup
+Task Management API built with [Bun](https://bun.sh/) [NestJS](https://nestjs.com/), [Fastify](https://www.fastify.io/), [Prisma](https://www.prisma.io/), and PostgreSQL. This project demonstrates in modern backend development using TypeScript.
 
-```bash
-$ pnpm install
-```
 
-## Compile and run the project
 
-```bash
-# development
-$ pnpm run start
+- **Authentication Module**
+  - User registration
+  - Login with JWT authentication
+  - Refresh token functionality
+  - Logout endpoint
+- **Task Management Module**
+  - CRUD operations for tasks
+- **User Module**
+  - User data retrieval and management
+- **Database Integration**
+  - Uses Prisma ORM with PostgreSQL
+  - **Security & Performance**
+  - Fastify HTTP adapter for high performance
+  - Security headers with Helmet
+  - Logging with nestjs-pino
 
-# watch mode
-$ pnpm run start:dev
+## Technologies Used
 
-# production mode
-$ pnpm run start:prod
-```
+- **Framework:** NestJS
+- **Runtime**:** Bun 
+- **HTTP Adapter:** Fastify
+- **Database:** PostgreSQL
+- **ORM:** Prisma
+- **Authentication:** JWT (JSON Web Tokens)
+- **Language:** TypeScript
+- **Logging:** nestjs-pino
 
-## Run tests
+## Getting Started
 
-```bash
-# unit tests
-$ pnpm run test
+### Prerequisites
+-   **Bun:**v1.1 or later OR  **Node.js:** v14 or later
+- **PostgreSQL:** Ensure you have a running PostgreSQL database (cloud Pg neon account or pgAdmin4 on your local machine or any other option)
+- **Bun** : is promising runtime for javascript and they claimed that it will replace nodejs , the thing that not every one knows that Bun works also as a package manager which has great performance according to pnpm or yarn or npm
+  but in production cases my be different nodejs is stable and well known 
 
-# e2e tests
-$ pnpm run test:e2e
+### Installation
 
-# test coverage
-$ pnpm run test:cov
-```
+1. **Clone the Repository:**
 
-## Deployment
+   ```bash
+   git clone https://github.com/yourusername/nestjs-task-management-api.git
+   cd nestjs-task-management-api
+   bun install || npm install
+   DATABASE_URL="postgresql://USER:PASSWORD@localhost:5432/mydatabase?schema=public"JWT_SECRET="yourSuperSecretKey" (# I use cloud pg neon)
+   bunx prisma migrate dev --name init
+   bunx prisma generate
+   bunx prisma studio
+   bun run start:dev || npm ( as you like)
 
-When you're ready to deploy your NestJS application to production, there are some key steps you can take to ensure it runs as efficiently as possible. Check out the [deployment documentation](https://docs.nestjs.com/deployment) for more information.
 
-If you are looking for a cloud-based platform to deploy your NestJS application, check out [Mau](https://mau.nestjs.com), our official platform for deploying NestJS applications on AWS. Mau makes deployment straightforward and fast, requiring just a few simple steps:
-
-```bash
-$ pnpm install -g mau
-$ mau deploy
-```
-
-With Mau, you can deploy your application in just a few clicks, allowing you to focus on building features rather than managing infrastructure.
-
-## Resources
-
-Check out a few resources that may come in handy when working with NestJS:
-
-- Visit the [NestJS Documentation](https://docs.nestjs.com) to learn more about the framework.
-- For questions and support, please visit our [Discord channel](https://discord.gg/G7Qnnhy).
-- To dive deeper and get more hands-on experience, check out our official video [courses](https://courses.nestjs.com/).
-- Deploy your application to AWS with the help of [NestJS Mau](https://mau.nestjs.com) in just a few clicks.
-- Visualize your application graph and interact with the NestJS application in real-time using [NestJS Devtools](https://devtools.nestjs.com).
-- Need help with your project (part-time to full-time)? Check out our official [enterprise support](https://enterprise.nestjs.com).
-- To stay in the loop and get updates, follow us on [X](https://x.com/nestframework) and [LinkedIn](https://linkedin.com/company/nestjs).
-- Looking for a job, or have a job to offer? Check out our official [Jobs board](https://jobs.nestjs.com).
-
-## Support
-
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
-
-## Stay in touch
-
-- Author - [Kamil Myśliwiec](https://twitter.com/kammysliwiec)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
-
-## License
-
-Nest is [MIT licensed](https://github.com/nestjs/nest/blob/master/LICENSE).
